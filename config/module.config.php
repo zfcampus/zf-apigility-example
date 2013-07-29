@@ -1,8 +1,10 @@
 <?php
 return array(
-    'zfapifirst' => array(
-        'configs' => array(
-            __DIR__ . '/zfapifirst.php'
+    'zf-rpc' => array(
+        array(
+            'methods' => 'GET',
+            'url' => '/api-first-example/hello',
+            'dispatchable' => 'ZFApiFirstExample\Controller\MyRpcController::hello'
         )
     )
 );
