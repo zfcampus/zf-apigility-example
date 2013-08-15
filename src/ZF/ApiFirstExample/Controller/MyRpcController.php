@@ -1,6 +1,6 @@
 <?php
 
-namespace ZFApiFirstExample\Controller;
+namespace ZF\ApiFirstExample\Controller;
 
 class MyRpcController
 {

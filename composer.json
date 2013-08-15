@@ -7,14 +7,19 @@
         "zf2"
     ],
     "homepage": "http://framework.zend.com/",
+    "repositories": [
+        { "type": "composer", "url": "https://packages.zendframework.com" },
+        { "type": "composer", "url": "http://packages-zfcampus.rhcloud.com" }
+    ],
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "dev-develop"
+        "zendframework/zendframework": "dev-develop",
+        "zendframework/zf-api-first": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "ZFApiFirstExample\\": "src/"
+            "ZF\\ApiFirstExample\\": "src/"
         }
     }
 }
