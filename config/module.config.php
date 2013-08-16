@@ -29,12 +29,14 @@ return array(
             ),
         ),
     ),
-    'db' => array('adapters' => array(
-        'Db\Status' => array(
-            'driver'   => 'Pdo_Sqlite',
-            'database' => realpath(getcwd()) . '/data/db/status.db',
-        ),
-    )),
+    'db' => array(
+        'adapters' =>array(
+            'Db\Status' => array(
+                'driver'   => 'Pdo_Sqlite',
+                'database' => realpath(getcwd()) . '/data/db/status.db',
+            ),
+        )
+    ),
     'router' => array(
         'routes' => array(
             'zf-api-first' => array(
