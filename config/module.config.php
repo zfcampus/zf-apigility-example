@@ -14,7 +14,8 @@ return array(
     ),
     'zf-content-negotiation' => array(
         'controllers' => array(
-            'ZF\ApiFirstExample\HelloWorld' => 'HalJson',
+            'ZF\ApiFirstExample\HelloWorld'       => 'HalJson',
+            'ZF\ApiFirstExample\StatusController' => 'HalJson',
         ),
     ),
     'zf-hal' => array(
