@@ -6,13 +6,13 @@ return array(
             'resource_identifiers' => 'ZF\ApiFirst\StatusResource',
             'collection_name'      => 'status',
             'page_size'            => '10',
-            'route_name'           => 'zf-api-first-status',
+            'route_name'           => 'zf-api-first.status',
         ),
     ),
     'zf-rpc' => array(
         'ZF\ApiFirstExample\HelloWorld' => array(
             'http_options' => array('GET'),
-            'route_name'   => 'zf-api-first-hello',
+            'route_name'   => 'zf-api-first.hello',
             'callable'     => 'ZF\ApiFirstExample\Controller\MyRpcController::hello'
         ),
     ),
@@ -26,11 +26,11 @@ return array(
         'metadata_map' => array(
             'ZF\ApiFirstExample\Status' => array(
                 'hydrator'   => 'ClassMethods',
-                'route_name' => 'zf-api-first-status',
+                'route_name' => 'zf-api-first.status',
             ),
             'ZF\ApiFirstExample\Statuses' => array(
                 'is_collection' => true,
-                'route_name'    => 'zf-api-first-status',
+                'route_name'    => 'zf-api-first.status',
             ),
         ),
     ),
@@ -44,7 +44,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'zf-api-first-hello' => array(
+            'zf-api-first.hello' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/api/example/hello',
@@ -53,7 +53,7 @@ return array(
                     ),
                 ),
             ),
-            'zf-api-first-status' => array(
+            'zf-api-first.status' => array(
                 'type' => 'Segment',
                 'options' => array(
                     'route' => '/api/example/status[/:id]',
