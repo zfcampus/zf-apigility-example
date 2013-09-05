@@ -1,36 +1,35 @@
 <?php
 return array(
     'zf-rest' => array(
-        'ZF\ApiFirstExample\StatusController' => array(
-            'listener'             => 'ZF\ApiFirstExample\Listener',
-            'resource_identifiers' => 'ZF\ApiFirst\StatusResource',
+        'ZF\ApiFirstExample\Controller\Status' => array(
+            'listener'             => 'ZF\ApiFirstExample\StatusResource',
             'collection_name'      => 'status',
             'page_size'            => '10',
-            'route_name'           => 'zf-api-first.status',
+            'route_name'           => 'zf-api-first-example.status',
         ),
     ),
     'zf-rpc' => array(
         'ZF\ApiFirstExample\HelloWorld' => array(
             'http_options' => array('GET'),
-            'route_name'   => 'zf-api-first.hello',
+            'route_name'   => 'zf-api-first-example.hello',
             'callable'     => 'ZF\ApiFirstExample\Controller\MyRpcController::hello'
         ),
     ),
     'zf-content-negotiation' => array(
         'controllers' => array(
-            'ZF\ApiFirstExample\HelloWorld'       => 'HalJson',
-            'ZF\ApiFirstExample\StatusController' => 'HalJson',
+            'ZF\ApiFirstExample\HelloWorld'        => 'HalJson',
+            'ZF\ApiFirstExample\Controller\Status' => 'HalJson',
         ),
     ),
     'zf-hal' => array(
         'metadata_map' => array(
             'ZF\ApiFirstExample\Status' => array(
                 'hydrator'   => 'ClassMethods',
-                'route_name' => 'zf-api-first.status',
+                'route_name' => 'zf-api-first-example.status',
             ),
-            'ZF\ApiFirstExample\Statuses' => array(
+            'ZF\ApiFirstExample\StatusCollection' => array(
                 'is_collection' => true,
-                'route_name'    => 'zf-api-first.status',
+                'route_name'    => 'zf-api-first-example.status',
             ),
         ),
     ),
@@ -44,7 +43,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'zf-api-first.hello' => array(
+            'zf-api-first-example.hello' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/api/example/hello',
@@ -53,7 +52,7 @@ return array(
                     ),
                 ),
             ),
-            'zf-api-first.status' => array(
+            'zf-api-first-example.status' => array(
                 'type' => 'Segment',
                 'options' => array(
                     'route' => '/api/example/status[/:id]',
@@ -61,7 +60,7 @@ return array(
                         'id' => '[a-f0-9]{32}',
                     ),
                     'defaults' => array(
-                        'controller' => 'ZF\ApiFirstExample\StatusController',
+                        'controller' => 'ZF\ApiFirstExample\Controller\Status',
                     ),
                 ),
             ),

@@ -9,7 +9,7 @@ use Zend\Math\Rand;
 use Zend\Paginator\Adapter\DbTableGateway as TableGatewayPaginator;
 use ZF\Rest\AbstractResourceListener;
 
-class StatusListener extends AbstractResourceListener
+class StatusResource extends AbstractResourceListener
 {
     protected $statusTable;
 
@@ -60,6 +60,6 @@ class StatusListener extends AbstractResourceListener
     public function fetchAll($data = array())
     {
         $adapter = new TableGatewayPaginator($this->statusTable);
-        return new Statuses($adapter);
+        return new StatusCollection($adapter);
     }
 }

@@ -35,9 +35,9 @@ class Module implements ApiFirstModuleInterface
 
                 return new TableGateway('status', $adapter, null, $prototype);
             },
-            'ZF\ApiFirstExample\Listener' => function ($services) {
+            'ZF\ApiFirstExample\StatusResource' => function ($services) {
                 $table = $services->get('ZF\ApiFirstExample\TableGateway');
-                return new StatusListener($table);
+                return new StatusResource($table);
             },
         ));
     }
