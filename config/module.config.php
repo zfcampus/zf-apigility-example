@@ -3,10 +3,11 @@ return array(
     'zf-api-first' => array(
         'db-connected' => array(
             'ZF\ApiFirstExample\StatusResource' => array(
-                'adapter_name' => 'Db\Status',
-                'table_name' => 'status',
-                'hydrator_name' => 'ClassMethods',
-                'entity_class' => 'ZF\ApiFirstExample\Status',
+                'adapter_name'     => 'Db\Status',
+                'table_name'       => 'status',
+                'identifier_name'  => 'id',
+                'hydrator_name'    => 'ClassMethods',
+                'entity_class'     => 'ZF\ApiFirstExample\Status',
                 'collection_class' => 'ZF\ApiFirstExample\StatusCollection',
             ),
         ),
