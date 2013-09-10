@@ -7,7 +7,7 @@ return array(
                 'table_name'       => 'status',
                 'identifier_name'  => 'id',
                 'hydrator_name'    => 'ClassMethods',
-                'entity_class'     => 'ZF\ApiFirstExample\Status',
+                'entity_class'     => 'ZF\ApiFirstExample\StatusEntity',
                 'collection_class' => 'ZF\ApiFirstExample\StatusCollection',
             ),
         ),
@@ -37,7 +37,7 @@ return array(
     ),
     'zf-hal' => array(
         'metadata_map' => array(
-            'ZF\ApiFirstExample\Status' => array(
+            'ZF\ApiFirstExample\StatusEntity' => array(
                 'hydrator'   => 'ClassMethods',
                 'route_name' => 'zf-api-first-example.status',
             ),

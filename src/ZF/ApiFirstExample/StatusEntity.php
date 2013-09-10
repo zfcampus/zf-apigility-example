@@ -2,7 +2,7 @@
 
 namespace ZF\ApiFirstExample;
 
-class Status
+class StatusEntity
 {
     protected $id;
     protected $text;
