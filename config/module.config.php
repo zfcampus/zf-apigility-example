@@ -14,15 +14,17 @@ return array(
     ),
     'zf-rest' => array(
         'ZF\ApiFirstExample\Controller\Status' => array(
-            'listener'             => 'ZF\ApiFirstExample\StatusResource',
-            'collection_name'      => 'status',
-            'page_size'            => '10',
-            'route_name'           => 'zf-api-first-example.status',
+            'listener'                => 'ZF\ApiFirstExample\StatusResource',
+            'collection_name'         => 'status',
+            'page_size'               => '10',
+            'route_name'              => 'zf-api-first-example.status',
+            'resource_http_methods'   => array('GET', 'PATCH', 'PUT'),
+            'collection_http_methods' => array('GET', 'POST'),
         ),
     ),
     'zf-rpc' => array(
         'ZF\ApiFirstExample\HelloWorld' => array(
-            'http_options' => array('GET'),
+            'http_methods' => array('GET'),
             'route_name'   => 'zf-api-first-example.hello',
             'callable'     => 'ZF\ApiFirstExample\Controller\MyRpcController::hello'
         ),
