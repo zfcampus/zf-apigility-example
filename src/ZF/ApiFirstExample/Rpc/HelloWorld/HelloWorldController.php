@@ -1,8 +1,8 @@
 <?php
 
-namespace ZF\ApiFirstExample\Controller;
+namespace ZF\ApiFirstExample\Rpc\HelloWorld;
 
-class MyRpcController
+class HelloWorldController
 {
     public function hello()
     {

@@ -32,7 +32,7 @@ class Module implements ApiFirstModuleInterface
         $shared = $events->getSharedManager();
 
         // Create a sha1-like identifier.
-        $shared->attach('ZF\ApiFirstExample\StatusResource', 'create', function ($e) {
+        $shared->attach('ZF\ApiFirstExample\Rest\Status\StatusResource', 'create', function ($e) {
             $data = $e->getParam('data');
             $data['id'] = Rand::getString(32, 'abcdef0123456789');
         }, 100);

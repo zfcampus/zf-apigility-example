@@ -1,6 +1,6 @@
 <?php
 
-namespace ZF\ApiFirstExample;
+namespace ZF\ApiFirstExample\Rest\Status;
 
 use Zend\Paginator\Paginator;
 
