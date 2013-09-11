@@ -57,7 +57,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'zf-api-first-example.rpc.hello' => array(
+            'zf-api-first-example.rpc.hello-world' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/api/example/hello',
