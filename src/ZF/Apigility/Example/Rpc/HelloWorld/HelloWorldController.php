@@ -1,6 +1,6 @@
 <?php
 
-namespace ZF\ApiFirstExample\Rpc\HelloWorld;
+namespace ZF\Apigility\Example\Rpc\HelloWorld;
 
 class HelloWorldController
 {

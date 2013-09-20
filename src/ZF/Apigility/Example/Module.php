@@ -1,11 +1,11 @@
 <?php
 
-namespace ZF\ApiFirstExample;
+namespace ZF\Apigility\Example;
 
 use Zend\Db\ResultSet\HydratingResultSet;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Math\Rand;
-use ZF\ApiFirst\ApiFirstModuleInterface;
+use ZF\Apigility\ApiFirstModuleInterface;
 
 class Module implements ApiFirstModuleInterface
 {
@@ -32,7 +32,7 @@ class Module implements ApiFirstModuleInterface
         $shared = $events->getSharedManager();
 
         // Create a sha1-like identifier.
-        $shared->attach('ZF\ApiFirstExample\Rest\Status\StatusResource', 'create', function ($e) {
+        $shared->attach('ZF\Apigility\Example\Rest\Status\StatusResource', 'create', function ($e) {
             $data = $e->getParam('data');
             $data['id'] = Rand::getString(32, 'abcdef0123456789');
         }, 100);

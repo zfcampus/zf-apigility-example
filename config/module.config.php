@@ -2,19 +2,19 @@
 return array(
     'zf-api-first' => array(
         'db-connected' => array(
-            'ZF\ApiFirstExample\Rest\Status\StatusResource' => array(
+            'ZF\Apigility\Example\Rest\Status\StatusResource' => array(
                 'adapter_name'     => 'Db\Status',
                 'table_name'       => 'status',
                 'identifier_name'  => 'id',
                 'hydrator_name'    => 'ClassMethods',
-                'entity_class'     => 'ZF\ApiFirstExample\Rest\Status\StatusEntity',
-                'collection_class' => 'ZF\ApiFirstExample\Rest\Status\StatusCollection',
+                'entity_class'     => 'ZF\Apigility\Example\Rest\Status\StatusEntity',
+                'collection_class' => 'ZF\Apigility\Example\Rest\Status\StatusCollection',
             ),
         ),
     ),
     'zf-rest' => array(
-        'ZF\ApiFirstExample\Rest\Status\Controller' => array(
-            'listener'                => 'ZF\ApiFirstExample\Rest\Status\StatusResource',
+        'ZF\Apigility\Example\Rest\Status\Controller' => array(
+            'listener'                => 'ZF\Apigility\Example\Rest\Status\StatusResource',
             'collection_name'         => 'status',
             'page_size'               => '10',
             'route_name'              => 'zf-api-first-example.rest.status',
@@ -23,25 +23,25 @@ return array(
         ),
     ),
     'zf-rpc' => array(
-        'ZF\ApiFirstExample\Rpc\HelloWorld\Controller' => array(
+        'ZF\Apigility\Example\Rpc\HelloWorld\Controller' => array(
             'http_methods' => array('GET'),
             'route_name'   => 'zf-api-first-example.rpc.hello-world',
-            'callable'     => 'ZF\ApiFirstExample\Rpc\HelloWorld\HelloWorldController::hello'
+            'callable'     => 'ZF\Apigility\Example\Rpc\HelloWorld\HelloWorldController::hello'
         ),
     ),
     'zf-content-negotiation' => array(
         'controllers' => array(
-            'ZF\ApiFirstExample\Rpc\HelloWorld\Controller' => 'HalJson',
-            'ZF\ApiFirstExample\Rest\Status\Controller'    => 'HalJson',
+            'ZF\Apigility\Example\Rpc\HelloWorld\Controller' => 'HalJson',
+            'ZF\Apigility\Example\Rest\Status\Controller'    => 'HalJson',
         ),
     ),
     'zf-hal' => array(
         'metadata_map' => array(
-            'ZF\ApiFirstExample\Rest\Status\StatusEntity' => array(
+            'ZF\Apigility\Example\Rest\Status\StatusEntity' => array(
                 'hydrator'   => 'ClassMethods',
                 'route_name' => 'zf-api-first-example.rest.status',
             ),
-            'ZF\ApiFirstExample\Rest\Status\StatusCollection' => array(
+            'ZF\Apigility\Example\Rest\Status\StatusCollection' => array(
                 'is_collection' => true,
                 'route_name'    => 'zf-api-first-example.rest.status',
             ),
@@ -62,7 +62,7 @@ return array(
                 'options' => array(
                     'route' => '/api/example/hello',
                     'defaults' => array(
-                        'controller' => 'ZF\ApiFirstExample\Rpc\HelloWorld\Controller',
+                        'controller' => 'ZF\Apigility\Example\Rpc\HelloWorld\Controller',
                     ),
                 ),
             ),
@@ -74,7 +74,7 @@ return array(
                         'id' => '[a-f0-9]{32}',
                     ),
                     'defaults' => array(
-                        'controller' => 'ZF\ApiFirstExample\Rest\Status\Controller',
+                        'controller' => 'ZF\Apigility\Example\Rest\Status\Controller',
                     ),
                 ),
             ),
