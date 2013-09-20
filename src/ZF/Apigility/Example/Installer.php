@@ -1,6 +1,6 @@
 <?php
 
-namespace ZF\ApiFirstExample;
+namespace ZF\Apigility\Example;
 
 use Composer\Script\Event;
 use Composer\Script\PackageEvent;
