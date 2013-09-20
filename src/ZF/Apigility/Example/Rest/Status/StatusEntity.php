@@ -1,6 +1,6 @@
 <?php
 
-namespace ZF\ApiFirstExample\Rest\Status;
+namespace ZF\Apigility\Example\Rest\Status;
 
 class StatusEntity
 {
