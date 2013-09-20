@@ -1,6 +1,6 @@
 <?php
 return array(
-    'zf-api-first' => array(
+    'zf-apigility' => array(
         'db-connected' => array(
             'ZF\Apigility\Example\Rest\Status\StatusResource' => array(
                 'adapter_name'     => 'Db\Status',
@@ -17,7 +17,7 @@ return array(
             'listener'                => 'ZF\Apigility\Example\Rest\Status\StatusResource',
             'collection_name'         => 'status',
             'page_size'               => '10',
-            'route_name'              => 'zf-api-first-example.rest.status',
+            'route_name'              => 'zf-apigility-example.rest.status',
             'resource_http_methods'   => array('GET', 'PATCH', 'PUT'),
             'collection_http_methods' => array('GET', 'POST'),
         ),
@@ -25,7 +25,7 @@ return array(
     'zf-rpc' => array(
         'ZF\Apigility\Example\Rpc\HelloWorld\Controller' => array(
             'http_methods' => array('GET'),
-            'route_name'   => 'zf-api-first-example.rpc.hello-world',
+            'route_name'   => 'zf-apigility-example.rpc.hello-world',
             'callable'     => 'ZF\Apigility\Example\Rpc\HelloWorld\HelloWorldController::hello'
         ),
     ),
@@ -39,11 +39,11 @@ return array(
         'metadata_map' => array(
             'ZF\Apigility\Example\Rest\Status\StatusEntity' => array(
                 'hydrator'   => 'ClassMethods',
-                'route_name' => 'zf-api-first-example.rest.status',
+                'route_name' => 'zf-apigility-example.rest.status',
             ),
             'ZF\Apigility\Example\Rest\Status\StatusCollection' => array(
                 'is_collection' => true,
-                'route_name'    => 'zf-api-first-example.rest.status',
+                'route_name'    => 'zf-apigility-example.rest.status',
             ),
         ),
     ),
@@ -57,7 +57,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'zf-api-first-example.rpc.hello-world' => array(
+            'zf-apigility-example.rpc.hello-world' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/api/example/hello',
@@ -66,7 +66,7 @@ return array(
                     ),
                 ),
             ),
-            'zf-api-first-example.rest.status' => array(
+            'zf-apigility-example.rest.status' => array(
                 'type' => 'Segment',
                 'options' => array(
                     'route' => '/api/example/status[/:id]',

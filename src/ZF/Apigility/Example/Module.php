@@ -5,9 +5,9 @@ namespace ZF\Apigility\Example;
 use Zend\Db\ResultSet\HydratingResultSet;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Math\Rand;
-use ZF\Apigility\ApiFirstModuleInterface;
+use ZF\Apigility\ApigilityModuleInterface;
 
-class Module implements ApiFirstModuleInterface
+class Module implements ApigilityModuleInterface
 {
     public function getAutoloaderConfig()
     {
@@ -22,7 +22,7 @@ class Module implements ApiFirstModuleInterface
 
     public function getConfig()
     {
-        return include __DIR__ . '/../../../config/module.config.php';
+        return include __DIR__ . '/../../../../config/module.config.php';
     }
 
     public function onBootstrap($e)

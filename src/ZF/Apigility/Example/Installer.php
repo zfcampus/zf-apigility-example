@@ -15,7 +15,7 @@ class Installer
      *
      * {
      *     "require": {
-     *         "zfcampus/zf-api-first-rest-example": "dev-master"
+     *         "zfcampus/zf-apigility-rest-example": "dev-master"
      *     },
      *     "scripts": {
      *         "post-package-install": "ZF\\ApiFirstRestExample\\Installer::install",
@@ -34,12 +34,12 @@ class Installer
 
         if ($event instanceof PackageEvent) {
             $package  = $event->getOperation()->getPackage();
-            if ($package != 'zfcampus/zf-api-first-example') {
+            if ($package != 'zfcampus/zf-apigility-example') {
                 return;
             }
         } else {
             $package = $composer->getRepositoryManager()->findPackage(
-                'zfcampus/zf-api-first-example'
+                'zfcampus/zf-apigility-example'
             );
             if (null === $package) {
                 return;
