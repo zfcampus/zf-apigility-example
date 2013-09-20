@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-0": {
-            "ZF\\Apigility\Example\\": "src/"
+            "ZF\\Apigility\\Example\\": "src/"
         }
     }
 }
