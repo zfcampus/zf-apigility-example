@@ -3,12 +3,11 @@ return array(
     'zf-apigility' => array(
         'db-connected' => array(
             'ZF\Apigility\Example\Rest\Status\StatusResource' => array(
-                'adapter_name'     => 'Db\Status',
-                'table_name'       => 'status',
-                'identifier_name'  => 'id',
-                'hydrator_name'    => 'ClassMethods',
-                'entity_class'     => 'ZF\Apigility\Example\Rest\Status\StatusEntity',
-                'collection_class' => 'ZF\Apigility\Example\Rest\Status\StatusCollection',
+                'controller_service_name' => 'ZF\Apigility\Example\Rest\Status\Controller',
+                'adapter_name'            => 'Db\Status',
+                'table_name'              => 'status',
+                'identifier_name'         => 'id',
+                'hydrator_name'           => 'ClassMethods',
             ),
         ),
     ),
@@ -20,6 +19,8 @@ return array(
             'route_name'              => 'zf-apigility-example.rest.status',
             'resource_http_methods'   => array('GET', 'PATCH', 'PUT'),
             'collection_http_methods' => array('GET', 'POST'),
+            'entity_class'            => 'ZF\Apigility\Example\Rest\Status\StatusEntity',
+            'collection_class'        => 'ZF\Apigility\Example\Rest\Status\StatusCollection',
         ),
     ),
     'zf-rpc' => array(
