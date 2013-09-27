@@ -32,7 +32,7 @@ class Module implements ApigilityModuleInterface
         $shared = $events->getSharedManager();
 
         // Create a sha1-like identifier.
-        $shared->attach('ZF\Apigility\Example\Rest\Status\StatusResource', 'create', function ($e) {
+        $shared->attach('ZF\Apigility\Example\V1\Rest\Status\StatusResource', 'create', function ($e) {
             $data = $e->getParam('data');
             $data['id'] = Rand::getString(32, 'abcdef0123456789');
         }, 100);
