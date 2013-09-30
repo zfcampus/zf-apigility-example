@@ -32,8 +32,27 @@ return array(
     ),
     'zf-content-negotiation' => array(
         'controllers' => array(
-            'ZF\Apigility\Example\V1\Rpc\HelloWorld\Controller' => 'HalJson',
+            'ZF\Apigility\Example\V1\Rpc\HelloWorld\Controller' => 'Json',
             'ZF\Apigility\Example\V1\Rest\Status\Controller'    => 'HalJson',
+        ),
+        'accept-whitelist' => array(
+            'ZF\Apigility\Example\V1\Rpc\HelloWorld\Controller' => array(
+                'application/json',
+                'application/*+json',
+            ),
+            'ZF\Apigility\Example\V1\Rest\Status\Controller'=> array(
+                'application/json',
+                'application/*+json',
+            ),
+        ),
+        'content-type-whitelist' => array(
+            'ZF\Apigility\Example\V1\Rpc\HelloWorld\Controller' => array(
+                'application/json',
+            ),
+            'ZF\Apigility\Example\V1\Rest\Status\Controller'=> array(
+                'application/json',
+                'application/*+json',
+            ),
         ),
     ),
     'zf-hal' => array(
