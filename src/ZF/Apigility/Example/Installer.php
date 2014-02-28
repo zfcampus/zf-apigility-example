@@ -1,7 +1,7 @@
 <?php
 /**
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
- * @copyright Copyright (c) 2013 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright Copyright (c) 2014 Zend Technologies USA Inc. (http://www.zend.com)
  */
 
 namespace ZF\Apigility\Example;
@@ -27,8 +27,8 @@ class Installer
      *     }
      * }
      *
-     * 
-     * @param Event $event 
+     *
+     * @param Event $event
      * @return void
      */
     public static function install(Event $event)
