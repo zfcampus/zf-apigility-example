@@ -27,8 +27,8 @@ class Installer
      *     }
      * }
      *
-     * 
-     * @param Event $event 
+     *
+     * @param Event $event
      * @return void
      */
     public static function install(Event $event)
